@@ -6,10 +6,11 @@ import android.widget.Button
 import android.widget.Toast
 import android.widget.TextView
 import com.example.actividad1.databinding.ActivityMainBinding
-import kotlin.random.Random
-import com.bignerdranch.android.geoquiz.databinding.ActivityMainBinding
+//import kotlin.random.Random
+//import com.bignerdranch.android.geoquiz.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+   // lateinit var myLayout:Coordinator
     private var _binding: ActivityMainBinding? = null
     private val bindingv get() = _binding!!
 
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         Question(R.string.question_alac, false)
     )
    // private fun checkAnswer(userAnswer: Boolean)
-    private var correctCount = 0
-    private var incorrectCount = 0
+   //private var correctCount = 0
+   //private var incorrectCount = 0
     private var currentIndex =0
     //
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,11 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         // val btnTrue: Button =findViewById(R.id.btn_true)
         //val btnFalse: Button=findViewById(R.id.btn_false)
-        binding.btnTrue.setOnClickListener { view: View ->
+        binding.btnTrue.setOnClickListener {
             checkAnswer(true)
         }
 
-        binding.btnFalse.setOnClickListener { view: View ->
+        binding.btnFalse.setOnClickListener {
             checkAnswer(false)
         }
         binding.button3.setOnClickListener {
